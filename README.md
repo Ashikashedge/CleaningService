@@ -1,4 +1,32 @@
-# Getting Started with Create React App
+# SparkClean Cleaning Services Demo
+
+This project is a responsive one-page cleaning services site built with React and Create React App.
+
+## Run locally
+
+```sh
+npm install
+npm start
+```
+
+The development site opens at [http://localhost:3000](http://localhost:3000).
+
+## Quote form integration
+
+The quote form needs a backend endpoint to submit enquiries. Copy `.env.example` to `.env`, set `REACT_APP_QUOTE_API_URL` to the endpoint URL, and restart the development server. The browser sends a JSON `POST` with `fullName`, `phone`, `email`, `service`, `propertyType`, `propertySize`, `preferredDate` and `message`. A successful `2xx` response confirms acceptance; `204` is supported. The backend should validate and handle customer details. No credentials belong in this frontend variable.
+
+When no endpoint is configured, the form explains that enquiries cannot be sent and points visitors to the contact details instead.
+
+## Project checks
+
+```sh
+npm test -- --watchAll=false --runInBand
+npm run build
+```
+
+The brand, contact details, FAQ, gallery, testimonial demo content and service areas live in `src/data/siteConfig.js`; service cards live in `src/data/services.js`. Replace demo contact details, example coverage areas and sample testimonials before launch. Gallery and page photography use Unsplash image URLs.
+
+## Create React App reference
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
